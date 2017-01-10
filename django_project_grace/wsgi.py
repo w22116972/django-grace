@@ -15,4 +15,4 @@ application = DjangoWhiteNoise(application)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_project_grace.settings")
 
-application = get_wsgi_application()
+# application = get_wsgi_application()
