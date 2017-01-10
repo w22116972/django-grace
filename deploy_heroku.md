@@ -45,7 +45,7 @@ from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
 ```
 
-#### local_settings.py
+#### local_settings.py @ same level as settings.py
 - 保存local 開發的設定(e.g. sqlite, remote用postgresql)
 - 不會commit to repository
 
