@@ -15,3 +15,4 @@ def home(request):
     return render(request, 'home.html', {
         #'post_list': post_list,
     })
+

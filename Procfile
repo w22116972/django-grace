@@ -1,0 +1,1 @@
+web: gunicorn django_project_grace.wsgi --log-file - --pythonpath eshop
