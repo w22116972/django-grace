@@ -1,8 +1,13 @@
 
-## Requirement packages
+## Required packages
 
-```
+```bash
 brew install postgresql
+```
+
+- 要先安裝postgresql才能安裝psycopg2
+
+```bash
 pip install gunicorn
 pip install whitenoise
 pip install psycopg2
@@ -38,10 +43,11 @@ try:
 except ImportError:
     pass
 ```
+
 #### wsgi.py
 ```python
 from whitenoise.django import DjangoWhiteNoise
-# after application = get_wsgi_application()
+# 放在 `application = get_wsgi_application()` 之下
 application = DjangoWhiteNoise(application)
 ```
 
@@ -76,13 +82,18 @@ python-3.5.2
 ```
 --
 
-*heroku run*: do remote instruction
+*heroku run*: 執行遠端指令
+
+- Create Superuser
+
+```
+heroku run python manage.py createsuperuser
+```
 
 - Migrate 
 
 ```
 heroku run python manage.py migrate
-heroku run python manage.py makemigrations
 ```
 
 - Update 
@@ -95,7 +106,7 @@ git push heroku master
 
 - Run server
 
-```
+```bash
 heroku run python manage.py runserver
 ```
 
